@@ -2,7 +2,18 @@ const path = require("path");
 
 module.exports = {
   productionSourceMap: false,
+  pluginOptions: {
+    electronBuilder: {
+      outputDir: "build",
+      mainProcessFile: "src/main/index.ts",
+      disableMainProcessTypescript: false,
+      builderOptions: {
+        productName: "Note"
+      }
+    }
+  },
   chainWebpack(config) {
+    setMain(config);
     setAlias(config);
     if (process.env.NODE_ENV !== "production") {
       hotReload(config);
@@ -14,6 +25,13 @@ module.exports = {
     cssModules(config);
   }
 };
+
+function setMain(config) {
+  config
+    .entry("app")
+    .clear()
+    .add("./src/renderer/main.ts");
+}
 
 /**
  * 忽略css警告
@@ -48,7 +66,7 @@ function ignoreCssWarnings(config) {
  * 设置别名
  */
 function setAlias(config) {
-  // config.resolve.alias.set("src", path.resolve(__dirname, "src"));
+  config.resolve.alias.set("@", path.resolve(__dirname, "./src/renderer/"));
 }
 
 /**
