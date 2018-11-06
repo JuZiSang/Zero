@@ -12,6 +12,7 @@
     "postinstall": "electron-builder install-app-deps"
   },
   "dependencies": {
+    "express": "^4.16.4",
     "fs-extra": "^7.0.0",
     "muse-ui": "^3.0.1",
     "nodegit": "^0.23.0",
@@ -22,6 +23,7 @@
     "vuex": "^3.0.1"
   },
   "devDependencies": {
+    "@types/express": "^4.16.0",
     "@types/fs-extra": "^5.0.4",
     "@types/node": "^10.12.2",
     "@types/nodegit": "^0.22.4",
