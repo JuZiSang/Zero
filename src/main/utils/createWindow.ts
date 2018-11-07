@@ -6,7 +6,7 @@ export default function createWindow(option: BrowserWindowConstructorOptions) {
   // 隐藏菜单栏
   Menu.setApplicationMenu(null);
   // Create the browser window.
-  const win = new BrowserWindow(option);
+  let win = new BrowserWindow(option);
   if (config.isDevelopment) {
     // Load the url of the dev server if in development mode
     win.loadURL(process.env.WEBPACK_DEV_SERVER_URL as string);

@@ -12,3 +12,11 @@ app.on("ready", async () => {
   }
   createWindow({ width: 400, height: 550 });
 });
+
+// quit application when all windows are closed
+app.on("window-all-closed", () => {
+  // on macOS it is common for applications to stay open until the user explicitly quits
+  if (process.platform !== "darwin") {
+    app.quit();
+  }
+});

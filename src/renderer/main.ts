@@ -3,7 +3,6 @@ import App from "@/App";
 import router from "./router";
 import store from "./store";
 import "@/styles/base.scss";
-import "@/plugins/vuetify";
 
 Vue.config.productionTip = false;
 

@@ -21,7 +21,6 @@
     "vue-property-decorator": "^7.0.0",
     "vue-router": "^3.0.1",
     "vuetify": "^1.3.5",
-    "vuetify-tsx": "^0.19.1",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
@@ -40,8 +39,6 @@
     "electron": "^3.0.8",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.1",
-    "stylus": "^0.54.5",
-    "stylus-loader": "^3.0.2",
     "typescript": "^3.0.0",
     "typings-for-css-modules-loader": "^1.7.0",
     "vue-cli-plugin-electron-builder": "^1.0.0-rc.7",
