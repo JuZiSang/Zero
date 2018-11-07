@@ -10,5 +10,5 @@ app.on("ready", async () => {
     // 安装开发工具
     await installVueDevtools();
   }
-  createWindow({ width: 800, height: 600, frame: false });
+  createWindow({ width: 400, height: 550 });
 });

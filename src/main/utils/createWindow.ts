@@ -1,8 +1,10 @@
-import { BrowserWindow, BrowserWindowConstructorOptions } from "electron";
+import { BrowserWindow, Menu, BrowserWindowConstructorOptions } from "electron";
 import config from "../config";
 import { createProtocol } from "vue-cli-plugin-electron-builder/lib";
 
 export default function createWindow(option: BrowserWindowConstructorOptions) {
+  // 隐藏菜单栏
+  Menu.setApplicationMenu(null);
   // Create the browser window.
   const win = new BrowserWindow(option);
   if (config.isDevelopment) {
