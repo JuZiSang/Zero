@@ -12,12 +12,8 @@ export default new Router({
       redirect: "/home"
     },
     {
-      path: "/login",
-      component: () => import("@/views/login/Login")
-    },
-    {
       path: "/home",
-      component: () => import("@/views/home/Home")
+      component: () => import("@/views/Home")
     }
   ]
 });
