@@ -1,0 +1,12 @@
+.home {
+  display: flex;
+  height: 100%;
+  .sidbar {
+    overflow: hidden;
+    height: 100%;
+  }
+  .editor {
+    overflow: hidden;
+    height: 100%;
+  }
+}

@@ -7,10 +7,11 @@ export default function createWindow(option: BrowserWindowConstructorOptions) {
   Menu.setApplicationMenu(null);
   // Create the browser window.
   let win = new BrowserWindow(option);
+  console.log("config.isDevelopment", config.isDevelopment);
   if (config.isDevelopment) {
     // Load the url of the dev server if in development mode
     win.loadURL(process.env.WEBPACK_DEV_SERVER_URL as string);
-    if (!process.env.IS_TEST) win.webContents.openDevTools();
+    win.webContents.openDevTools();
   } else {
     createProtocol("app");
     // Load the index.html when not in development
