@@ -10,7 +10,12 @@ app.on("ready", async () => {
     // 安装开发工具
     await installVueDevtools();
   }
-  createWindow({ width: 1200, height: 800 });
+  createWindow({
+    width: 1200,
+    height: 800,
+    useContentSize: true,
+    resizable: true
+  });
 });
 
 // quit application when all windows are closed
