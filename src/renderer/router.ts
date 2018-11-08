@@ -9,11 +9,15 @@ export default new Router({
   routes: [
     {
       path: "/",
-      redirect: "/login"
+      redirect: "/home"
     },
     {
       path: "/login",
       component: () => import("@/views/login/Login")
+    },
+    {
+      path: "/home",
+      component: () => import("@/views/home/Home")
     }
   ]
 });
