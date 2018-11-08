@@ -1,9 +1,11 @@
+@import "./import.scss";
+
 html,
 body {
   height: 100%;
   padding: 0;
   margin: 0;
-  background: hsl(0, 0%, 96%);
+  background: $bgColor;
 }
 
 p {

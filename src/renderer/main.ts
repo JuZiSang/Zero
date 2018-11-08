@@ -2,8 +2,9 @@ import Vue from "vue";
 import App from "@/App";
 import router from "./router";
 import store from "./store";
-import "@/styles/base.scss";
 import "material-design-icons-iconfont/dist/material-design-icons.css";
+import "typeface-roboto";
+import "@/styles/base.scss";
 
 Vue.config.productionTip = false;
 

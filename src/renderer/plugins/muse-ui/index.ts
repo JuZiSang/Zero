@@ -5,7 +5,7 @@ export { default as MuDrawer } from "./components/MuDrawer";
 export {
   MuList,
   MuListItem,
-  MuListAction,
+  MuListItemAction,
   MuListItemAfterText,
   MuListItemContent,
   MuListItemSubTitle,

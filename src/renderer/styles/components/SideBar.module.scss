@@ -3,12 +3,13 @@
   height: 100%;
   overflow: hidden;
   @include noTextSelect;
+  background: $bgColor;
 }
 
 .SideBarHeader {
   height: 136px;
-  background: $primaryColor;
-  color: #fff;
+  background-color: $primaryColor !important;
+  color: #fff !important;
   position: relative;
   .avatar {
     position: absolute;
@@ -21,9 +22,9 @@
     bottom: 16px;
     left: 24px;
     font-size: 14px;
+    font-weight: 500;
     .name {
       display: block;
-      font-weight: normal;
     }
     .email {
       margin-top: 2px;

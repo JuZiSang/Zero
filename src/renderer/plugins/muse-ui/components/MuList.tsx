@@ -27,7 +27,7 @@ export interface MuListItemProps {
 
 export const MuList = ofType<MuListProps, MuListEvents>().convert(list.List);
 export const MuListItem = ofType<MuListItemProps, any>().convert(list.ListItem);
-export const MuListAction = ofType<any, any>().convert(list.ListAction);
+export const MuListItemAction = ofType<any, any>().convert(list.ListAction);
 export const MuListItemContent = ofType<any, any>().convert(
   list.ListItemContent
 );
