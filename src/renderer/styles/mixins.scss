@@ -1,0 +1,43 @@
+// 禁止文本选择
+@mixin noTextSelect {
+  user-select: none;
+}
+
+// 清除浮动
+@mixin clearfix {
+  *zoom: 1;
+  &:after {
+    content: '';
+    display: table;
+    line-height: 0;
+    clear: both;
+  }
+}
+
+// 全屏
+@mixin full {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+// 居中
+@mixin centerBlock {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@mixin ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin clearInput {
+  background: none;
+  outline: none;
+  border: 0px;
+}

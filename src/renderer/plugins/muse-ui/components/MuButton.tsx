@@ -12,5 +12,5 @@ export interface MuButtonProps {
 }
 
 export default ofType<MuButtonProps, any>().convert(
-  require("muse-ui/es5/AppBar").default
+  require("muse-ui/es5/Button").default
 );

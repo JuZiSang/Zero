@@ -12,7 +12,8 @@ export {
   MuListItemTitle
 } from "./components/MuList";
 export { default as MuIcon } from "./components/MuIcon";
-export { default as MuMuAppbar } from "./components/MuAppbar";
+export { default as MuMuAppbar } from "./components/MuAppBar";
 export { default as MuButton } from "./components/MuButton";
 export { default as MuDivider } from "./components/MuDivider";
 export { default as MuPaper } from "./components/MuPaper";
+export { default as MuAvatar } from "./components/MuAvatar";
