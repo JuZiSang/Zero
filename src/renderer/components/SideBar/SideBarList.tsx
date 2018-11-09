@@ -6,19 +6,34 @@ import {
   MuListItemAction,
   MuListItemTitle
 } from "@/plugins/muse-ui";
-import * as style from "@/styles/components/SideBar.module.scss";
 
 @Component
 export default class SideBarList extends Vue {
   render() {
     return (
       <MuList toggleNested>
-        <MuListItem button ripple={false} nested>
-          <MuListItemTitle>文件夹</MuListItemTitle>
-          <MuListItemAction>
-            <MuIcon class="toggle-icon" size="24" value="keyboard_arrow_down" />
-          </MuListItemAction>
-        </MuListItem>
+        {Array.from({ length: 5 }).map(() => {
+          return (
+            <MuListItem button ripple={false} nested>
+              <MuListItemAction>
+                <MuIcon value="inbox" />
+              </MuListItemAction>
+              <MuListItemTitle>文件夹</MuListItemTitle>
+              <MuListItemAction>
+                <MuIcon
+                  class="toggle-icon"
+                  size="24"
+                  value="keyboard_arrow_down"
+                />
+              </MuListItemAction>
+              {Array.from({ length: 10 }).map((item, index) => (
+                <MuListItem button ripple={false} slot="nested">
+                  <MuListItemTitle>List Item {index}</MuListItemTitle>
+                </MuListItem>
+              ))}
+            </MuListItem>
+          );
+        })}
       </MuList>
     );
   }

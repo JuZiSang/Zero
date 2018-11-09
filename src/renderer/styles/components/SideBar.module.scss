@@ -1,7 +1,6 @@
 @import "@/styles/import.scss";
 .sidebar {
   height: 100%;
-  overflow: hidden;
   @include noTextSelect;
   background: $bgColor;
 }
