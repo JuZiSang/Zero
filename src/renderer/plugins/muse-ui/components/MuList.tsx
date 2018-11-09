@@ -25,8 +25,14 @@ export interface MuListItemProps {
   value?: any;
 }
 
+export interface MuListItemEvents {
+  onToggleNested: any;
+}
+
 export const MuList = ofType<MuListProps, MuListEvents>().convert(list.List);
-export const MuListItem = ofType<MuListItemProps, any>().convert(list.ListItem);
+export const MuListItem = ofType<MuListItemProps, MuListItemEvents>().convert(
+  list.ListItem
+);
 export const MuListItemAction = ofType<any, any>().convert(list.ListAction);
 export const MuListItemContent = ofType<any, any>().convert(
   list.ListItemContent

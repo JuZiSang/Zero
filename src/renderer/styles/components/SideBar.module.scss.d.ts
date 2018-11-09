@@ -6,3 +6,5 @@ export const address: string;
 export const name: string;
 export const email: string;
 export const action: string;
+export const SideBarList: string;
+export const sideBarList: string;

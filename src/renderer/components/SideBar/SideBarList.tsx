@@ -6,17 +6,22 @@ import {
   MuListItemAction,
   MuListItemTitle
 } from "@/plugins/muse-ui";
+import * as style from "@/styles/components/SideBar.module.scss";
 
 @Component
 export default class SideBarList extends Vue {
+  // itemList = [{}];
+
+  open = "folder";
+
   render() {
     return (
-      <MuList toggleNested>
-        {Array.from({ length: 5 }).map(() => {
+      <MuList class={style.sideBarList} toggleNested>
+        {["文件夹", "标签"].map(item => {
           return (
-            <MuListItem button ripple={false} nested>
+            <MuListItem open={this.open === item} button ripple={false} nested>
               <MuListItemAction>
-                <MuIcon value="inbox" />
+                <MuIcon value="folder" />
               </MuListItemAction>
               <MuListItemTitle>文件夹</MuListItemTitle>
               <MuListItemAction>

@@ -36,3 +36,14 @@
     right: 8px;
   }
 }
+
+.SideBarList {
+  :global {
+    .toggle-icon {
+      transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    .mu-item__open .toggle-icon {
+      transform: rotate(180deg);
+    }
+  }
+}
